@@ -8,7 +8,7 @@ constexpr int a_constexpr(int a)
 int main()
 {
 	const int i = 10;
-	//int arr1[not_a_constexpr()];   //error
+	//int arr1[not_a_constexpr()];  //error
 	int arr2[a_constexpr(i)];
 }
 
