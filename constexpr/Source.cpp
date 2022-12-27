@@ -1,9 +1,9 @@
-int not_a_constexpr();
+ï»¿int not_a_constexpr();
 
 constexpr int a_constexpr(int a)
 {
 	return a * 2;
-}//constexprº¯ÊıÊ¹ÓÃÇ°±ØĞë¶¨Òå
+}//constexprå‡½æ•°ä½¿ç”¨å‰å¿…é¡»å®šä¹‰
 
 int main()
 {
