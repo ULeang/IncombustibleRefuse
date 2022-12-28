@@ -1,7 +1,7 @@
 #include <iostream>
 
 template<typename ... Ts>
-auto sum_all(Ts ... ts)
+auto sum_all(const Ts& ... ts)
 {
 	return (ts + ... + 0);
 }
@@ -17,7 +17,8 @@ auto sum_all_oldstyle(T arg, Ts ... left_args)
 
 int main()
 {
-	std::cout << sum_all(3, 2.4, 99, 8.2f) << ' ' << sum_all() << ' ';
+	const int x = 10;
+	std::cout << sum_all(x, 3, 2.4, 99, 8.2f) << ' ' << sum_all() << ' ';
 	std::cout << sum_all_oldstyle(3, 2.4, 99, 8.2f);
 	return 0;
 }
