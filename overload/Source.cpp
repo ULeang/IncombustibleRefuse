@@ -30,12 +30,12 @@ public:
 	virtual void foo_2()
 	{
 		std::cout << "Derived_2\n";
-	}//正确的重载
+	}//正确的重写
 
 	virtual void foo_3(int a)
 	{
 		std::cout << "Derived_3\n";
-	}//错误的重载,覆盖了Base的foo_3
+	}//错误的重写,覆盖了Base的foo_3
 };
 
 int main()
@@ -51,8 +51,8 @@ int main()
 
 	Base* pb = &d;
 	pb->foo();//foo不是虚函数，因此调用Base::foo()
-	pb->foo_2();//foo_2是虚函数且被重载了，因此调用Derived::foo_2()
-	pb->foo_3();//foo_3是虚函数但没有被重载，因此表现如同Base::foo_3()
+	pb->foo_2();//foo_2是虚函数且被重写了，因此调用Derived::foo_2()
+	pb->foo_3();//foo_3是虚函数但没有被重写，因此表现如同Base::foo_3()
 
 	return 0;
 }
