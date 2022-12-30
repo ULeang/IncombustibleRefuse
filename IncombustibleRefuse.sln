@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValueTraits", "ValueTraits\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "override", "override\override.vcxproj", "{526FC051-D7A2-4A01-AB86-D499BA14C511}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "true_type", "true_type\true_type.vcxproj", "{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{526FC051-D7A2-4A01-AB86-D499BA14C511}.Release|x64.Build.0 = Release|x64
 		{526FC051-D7A2-4A01-AB86-D499BA14C511}.Release|x86.ActiveCfg = Release|Win32
 		{526FC051-D7A2-4A01-AB86-D499BA14C511}.Release|x86.Build.0 = Release|Win32
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Debug|x64.ActiveCfg = Debug|x64
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Debug|x64.Build.0 = Debug|x64
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Debug|x86.ActiveCfg = Debug|Win32
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Debug|x86.Build.0 = Debug|Win32
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Release|x64.ActiveCfg = Release|x64
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Release|x64.Build.0 = Release|x64
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Release|x86.ActiveCfg = Release|Win32
+		{20E3A6ED-59DE-4310-BF39-E9359BD99CC2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

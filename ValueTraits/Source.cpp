@@ -100,6 +100,26 @@ auto accum_v4(Iter begin, Iter end)
 	return res;
 }//v4，使用参数化的萃取
 
+template<typename T>
+struct sum_policy
+{
+	static void policy(T& t1, const T& t2)
+	{
+		t1 = t1 + t2;
+	}
+};
+
+template<typename Iter,
+	typename Policy = sum_policy<typename accumulation_traits<typename std::iterator_traits<Iter>::value_type>::type>,
+	typename Traits = accumulation_traits<typename std::iterator_traits<Iter>::value_type>>
+	auto accum_v5(Iter begin, Iter end)
+{
+	auto res = Traits::zero;
+	for (; begin != end; ++begin)
+		Policy::policy(res, *begin);
+	return res;
+}//v5，使用策略
+
 int main()
 {
 	int iarr[]{ 1,2,3,4,5 };
@@ -113,10 +133,13 @@ int main()
 	std::cout << static_cast<char>(accum_v2(carr, carr + 5) / 5) << std::endl;//正确
 	std::cout << accum_v3(iarr, iarr + 5) << std::endl;
 	std::cout << accum_v3(viarr.cbegin(), viarr.cend()) << std::endl;
-	std::cout << static_cast<char>(accum_v3(carr, carr + 5) / 5) << std::endl;//正确
+	std::cout << static_cast<char>(accum_v3(carr, carr + 5) / 5) << std::endl;
 	std::cout << accum_v4(iarr, iarr + 5) << std::endl;
 	std::cout << accum_v4(viarr.cbegin(), viarr.cend()) << std::endl;
-	std::cout << static_cast<char>(accum_v4(carr, carr + 5) / 5) << std::endl;//正确
+	std::cout << static_cast<char>(accum_v4(carr, carr + 5) / 5) << std::endl;
+	std::cout << accum_v5(iarr, iarr + 5) << std::endl;
+	std::cout << accum_v5(viarr.cbegin(), viarr.cend()) << std::endl;
+	std::cout << static_cast<char>(accum_v5(carr, carr + 5) / 5) << std::endl;
 
 	return 0;
 }
